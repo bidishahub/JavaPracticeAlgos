@@ -8,19 +8,19 @@ public class BinarySearch
     
     public static void main (String[] args)  
     { 
-        int arr[] = {10,9,8,7,6,5,4,3,2,1}; 
+        int arr[] = {1,2,3,4,5,6,7,8,9,10}; 
         int n = arr.length; 
         int key = 9;
         int loc=0;
         int pivot = countRotations(arr, 0, n-1);
-        System.out.println(pivot);
+        //  System.out.println(pivot);
         loc = findLocation(arr,pivot,key,n);
         
           
         System.out.println(loc+1); 
     } 
     static int findLocation(int arr[], int pivot, int key, int n){
-        if (pivot == -1)
+        if (pivot == 0)
             return binarySearch(arr,0,n-1,key);
         if(arr[pivot] == key){
             return pivot;
@@ -39,7 +39,7 @@ public class BinarySearch
         if (high == low) 
             return low; 
         int mid = low + (high - low)/2;  
-        System.out.println(mid);
+        // System.out.println(mid);
         if (mid < high && arr[mid+1] < arr[mid]) {
             return (mid + 1); 
             
