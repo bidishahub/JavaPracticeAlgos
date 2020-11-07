@@ -41,7 +41,6 @@ public class BinarySearch
         int mid = low + (high - low)/2;  
         System.out.println(mid);
         if (mid < high && arr[mid+1] < arr[mid]) {
-            System.out.println("here1");
             return (mid + 1); 
             
         }
